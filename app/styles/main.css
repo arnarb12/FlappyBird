@@ -1,3 +1,8 @@
+@keyframes flap {
+    from {top: 2em;}
+    to {top: 1em;}
+}
+
 .Player {
 	position: absolute;
 	top: 0;
@@ -5,6 +10,49 @@
 	width: 5em;
 	height: 5em;
 	background: blue;
+}
+
+.Player-wings {
+    position: absolute;
+    top: 2em;
+    left: 0.5em;
+    width: 2.5em;
+    height: 1em;
+
+    background: yellow;
+    animation-name: flap;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+
+}
+
+.Player-eyes {
+    position: absolute;
+    top: 1em;
+    left: 4em;
+    width: 1.2em;
+    height: 1.25em;
+
+    background: white;
+}
+
+.Player-eyes-pupils {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    width: 0.7em;
+    height: 0.7em;
+
+    background: black;
+}
+
+.Player-beak {
+    position: absolute;
+    top: 3em;
+    left: 4em;
+    width: 1.5em;
+    height: 0.75em;
+    background: orange;
 }
 
 .Scoreboard {
@@ -60,5 +108,5 @@ height: 57.6em;
 margin-left: -51.2em;
 margin-top: -28.8em;
 overflow: hidden;
-background: red;
+background-image: url("http://kidsappcorner.com/wp-content/uploads/2013/06/background.jpg");
 }
