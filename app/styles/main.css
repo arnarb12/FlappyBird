@@ -1,6 +1,9 @@
 @keyframes flap {
-    from {top: 2em;}
-    to {top: 1em;}
+    from {top: 2.5em;}
+    25% {top: 2em;}
+    50% {top: 1.5em;}
+    75% {top: 2em;}
+    to {top: 2.5em;}
 }
 
 .Player {
@@ -9,7 +12,8 @@
 	left: 0;
 	width: 5em;
 	height: 5em;
-	background: blue;
+    border-radius: 0.3em;
+	background: #DB7093;
 }
 
 .Player-wings {
@@ -18,10 +22,11 @@
     left: 0.5em;
     width: 2.5em;
     height: 1em;
+    border-radius: 0.3em;
 
-    background: yellow;
+    background: Purple;
     animation-name: flap;
-    animation-duration: 0.7s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
 
 }
@@ -32,6 +37,7 @@
     left: 4em;
     width: 1.2em;
     height: 1.25em;
+    border-radius: 0.5em;
 
     background: white;
 }
@@ -42,7 +48,7 @@
     left: 0.5em;
     width: 0.7em;
     height: 0.7em;
-
+    border-radius: 0.5em;
     background: black;
 }
 
@@ -52,7 +58,8 @@
     left: 4em;
     width: 1.5em;
     height: 0.75em;
-    background: orange;
+    border-radius: 0.3em;
+    background: Orange;
 }
 
 .Scoreboard {
