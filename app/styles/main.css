@@ -1,9 +1,11 @@
 @keyframes flap {
-    from {top: 2.5em;}
-    25% {top: 2em;}
-    50% {top: 1.5em;}
-    75% {top: 2em;}
-    to {top: 2.5em;}
+    from {transform: rotateX(0);}
+    to {transform: rotateX(180deg);}
+}
+
+@keyframes parallax {
+    from {transform: translate(60em, 3em);}
+    to {transform: translate(-55em, 3em);}
 }
 
 .Player {
@@ -12,8 +14,11 @@
 	left: 0;
 	width: 5em;
 	height: 5em;
-    border-radius: 0.3em;
+    border-radius: 0.3em 2em 2em 1.5em;
+    border-style: outset;
+    border-width: 0.1em;
 	background: #DB7093;
+
 }
 
 .Player-wings {
@@ -21,13 +26,14 @@
     top: 2em;
     left: 0.5em;
     width: 2.5em;
-    height: 1em;
+    height: 1.2em;
     border-radius: 0.3em;
+    border-style: outset;
+    border-width: 0.1em;
 
     background: Purple;
-    animation-name: flap;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    transform-origin: top left;
+    animation: 0.4s flap alternate infinite;
 
 }
 
@@ -35,9 +41,11 @@
     position: absolute;
     top: 1em;
     left: 4em;
-    width: 1.2em;
-    height: 1.25em;
-    border-radius: 0.5em;
+    width: 1.4em;
+    height: 1.4em;
+    border-radius: 0.8em;
+    border-style: outset;
+    border-width: 0.1em;
 
     background: white;
 }
@@ -45,10 +53,11 @@
 .Player-eyes-pupils {
     position: absolute;
     top: 0.5em;
-    left: 0.5em;
+    left: 0.6em;
     width: 0.7em;
     height: 0.7em;
     border-radius: 0.5em;
+
     background: black;
 }
 
@@ -56,10 +65,60 @@
     position: absolute;
     top: 3em;
     left: 4em;
-    width: 1.5em;
+    width: 1.3em;
     height: 0.75em;
     border-radius: 0.3em;
+    border-style: outset;
+    border-width: 0.1em;
+    border-color: yellow;
     background: Orange;
+}
+
+.Cloud {
+    position: fixed;
+    top: -14em;
+    left: 15em;
+    width: 6em;
+    height: 4em;
+
+    border-radius: 2.5em;
+    background: white;
+
+    transform-origin: top left;
+    animation: 10s parallax infinite;
+}
+
+.Cloud-circle1 {
+    position: absolute;
+    top: 0.7em;
+    left: 3em;
+    width: 4em;
+    height: 2.5em;
+
+    border-radius: 2em;
+    background: white;
+}
+
+.Cloud-circle2 {
+    position: absolute;
+    top: -0.5em;
+    left: 0em;
+    width: 4em;
+    height: 2.5em;
+
+    border-radius: 30em 30em 30em 1em;
+    background: white;
+}
+
+.Cloud-circle3 {
+    position: absolute;
+    top: 1.3em;
+    left: -2em;
+    width: 4em;
+    height: 3em;
+
+    border-radius: 40em;
+    background: white;
 }
 
 .Scoreboard {
