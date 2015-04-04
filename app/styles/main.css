@@ -3,9 +3,42 @@
     to {transform: rotateX(180deg);}
 }
 
-@keyframes parallax {
-    from {transform: translate(60em, 3em);}
-    to {transform: translate(-55em, 3em);}
+@keyframes cloud-parallax {
+    from {transform: translate(75em, 3em);}
+    to {transform: translate(-60em, 3em);}
+}
+
+@keyframes pole-parallax {
+    from {transform: translate(120em, 0em);}
+    to {transform: translate(-20em, 0em);}
+}
+
+.Obstacle-pole1 {
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    height: 20em;
+    width: 10em;
+
+    border-radius: 0em 0em 10em 10em;
+    background-color: #7CFC00;
+
+    transform-origin: top left;
+    animation: pole-parallax 20s infinite;
+}
+
+.Obstacle-pole2 {
+    position: absolute;
+    top: 30em;
+    left: 0em;
+    height: 30em;
+    width: 10em;
+
+    border-radius: 10em 10em 0em 0em;
+    background-color: #7CFC00;
+
+    transform-origin: top left;
+    animation: pole-parallax 20s infinite;
 }
 
 .Player {
@@ -34,7 +67,6 @@
     background: Purple;
     transform-origin: top left;
     animation: 0.4s flap alternate infinite;
-
 }
 
 .Player-eyes {
@@ -76,8 +108,8 @@
 
 .Cloud {
     position: fixed;
-    top: -14em;
-    left: 15em;
+    top: 5em;
+    left: 50em;
     width: 6em;
     height: 4em;
 
@@ -85,7 +117,8 @@
     background: white;
 
     transform-origin: top left;
-    animation: 10s parallax infinite;
+    animation: cloud-parallax 10s infinite;
+    
 }
 
 .Cloud-circle1 {
@@ -174,5 +207,6 @@ height: 57.6em;
 margin-left: -51.2em;
 margin-top: -28.8em;
 overflow: hidden;
-background-image: url("http://kidsappcorner.com/wp-content/uploads/2013/06/background.jpg");
+background-color: DodgerBlue;
+/**background-image: url("http://kidsappcorner.com/wp-content/uploads/2013/06/background.jpg");**/
 }
