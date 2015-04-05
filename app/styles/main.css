@@ -1,3 +1,5 @@
+/*********************************************************KEYFRAMES***********************************************************/
+
 @keyframes flap {
     from {transform: rotateX(0);}
     to {transform: rotateX(180deg);}
@@ -8,39 +10,46 @@
     to {transform: translate(-60em, 3em);}
 }
 
-@keyframes pole-parallax {
+@keyframes pipe-parallax {
     from {transform: translate(120em, 0em);}
     to {transform: translate(-20em, 0em);}
 }
 
-.Obstacle-pole1 {
-    position: absolute;
+@keyframes bottom-parallax {
+    from {transform: translate(-20em, 0em);}
+    to {transform: translate(-50em, 0em);}
+}
+
+/*********************************************************OBSTACLE***********************************************************/
+
+.Obstacle {
+    transform-origin: top left;
+    animation: pipe-parallax 20s infinite;
+}
+.Obstacle-pipe1 {
+    position: fixed;
     top: 0em;
     left: 0em;
     height: 20em;
     width: 10em;
 
     border-radius: 0em 0em 10em 10em;
-    background-color: #7CFC00;
-
-    transform-origin: top left;
-    animation: pole-parallax 20s infinite;
+    background-color: #3DD715;
 }
 
-.Obstacle-pole2 {
-    position: absolute;
+.Obstacle-pipe2 {
+    position: fixed;
     top: 30em;
     left: 0em;
     height: 30em;
     width: 10em;
 
     border-radius: 10em 10em 0em 0em;
-    background-color: #7CFC00;
+    background-color: #3DD715;
 
-    transform-origin: top left;
-    animation: pole-parallax 20s infinite;
 }
 
+/*********************************************************PLAYER***********************************************************/
 .Player {
 	position: absolute;
 	top: 0;
@@ -93,18 +102,45 @@
     background: black;
 }
 
-.Player-beak {
+.Player-beak-up {
     position: absolute;
     top: 3em;
     left: 4em;
     width: 1.3em;
-    height: 0.75em;
-    border-radius: 0.3em;
+    height: 0.5em;
+    border-radius: 0.5em 0.5em 0em 0em;
     border-style: outset;
     border-width: 0.1em;
     border-color: yellow;
     background: Orange;
 }
+
+.Player-beak-down {
+    position: absolute;
+    top: 3.7em;
+    left: 4em;
+    width: 1.15em;
+    height: 0.3em;
+    border-radius: 0em 0em 0.5em 0.5em;
+    border-width: 0.1em;
+    border-color: yellow;
+    background: Orange;
+}
+
+.Player-legs {
+    position: absolute;
+    top: 4.6em;
+    left: 1.8em;
+    width: 1.8em;
+    height: 0.7em;
+    border-radius: 0.9em 0.7em 0em 0em;
+    border-style: outset;
+    border-width: 0.1em;
+    border-color: yellow;
+    background: Orange;
+}
+
+/*********************************************************CLOUD***********************************************************/
 
 .Cloud {
     position: fixed;
@@ -122,7 +158,7 @@
 }
 
 .Cloud-circle1 {
-    position: absolute;
+    position: fixed;
     top: 0.7em;
     left: 3em;
     width: 4em;
@@ -133,7 +169,7 @@
 }
 
 .Cloud-circle2 {
-    position: absolute;
+    position: fixed;
     top: -0.5em;
     left: 0em;
     width: 4em;
@@ -144,7 +180,7 @@
 }
 
 .Cloud-circle3 {
-    position: absolute;
+    position: fixed;
     top: 1.3em;
     left: -2em;
     width: 4em;
@@ -153,6 +189,25 @@
     border-radius: 40em;
     background: white;
 }
+
+/*********************************************************BOTTOM***********************************************************/
+
+.Bottom {
+    position: absolute;
+
+    top: 95%;
+    bottom: 0%;
+    width: 150%;
+    height: 10em;
+
+    background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Color_icon_green.svg/1024px-Color_icon_green.svg.png");
+    background-size: 25%;
+
+    transform-origin: top left;
+    animation: bottom-parallax 5s infinite;
+}
+
+/*********************************************************SCOREBOARD***********************************************************/
 
 .Scoreboard {
 	position: absolute;
