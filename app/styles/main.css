@@ -11,8 +11,8 @@
 }
 
 @keyframes pipe-parallax {
-    from {transform: translate(120em, 0em);}
-    to {transform: translate(-20em, 0em);}
+    from {transform: translate3d(120em ,0em , 0em);}
+    to {transform: translate3d(-10em ,0em , 0em);}
 }
 
 @keyframes bottom-parallax {
@@ -20,6 +20,13 @@
     to {transform: translate(-50em, 0em);}
 }
 
+@keyframes test-parallax {
+    from {transform: translate3d(120em ,0em , 0em);}
+    to {transform: translate3d(-40em ,0em , 0em);}
+}
+
+/*from {transform: translate(120em, 0em);}
+    to {transform: translate(-20em, 0em);}*/
 /**********************TEST******************/
 
 .TestingBox {
@@ -29,12 +36,17 @@
     height: 10em;
     width: 10em;
     background-color: yellow;
+
+    transform-origin: top left;
+    animation: test-parallax 3s infinite;
+
 }
 /*********************************************************OBSTACLE***********************************************************/
 
 .Obstacle {
     transform-origin: top left;
-    animation: pipe-parallax 20s infinite;
+    animation: pipe-parallax 8s infinite;
+    animation-timing-function: linear;
 }
 .Obstacle-pipe1Up {
     position: fixed;
@@ -112,7 +124,8 @@
 
 .Moving {
     transform-origin: top left;
-    animation: cloud-parallax 14s infinite;
+    animation: cloud-parallax 18s infinite;
+    animation-timing-function: linear;
 }
 .Moving-cloud {
     position: absolute;
@@ -264,6 +277,7 @@
 
     transform-origin: top left;
     animation: bottom-parallax 5s infinite;
+    animation-timing-function: linear;
 }
 
 /*********************************************************SCOREBOARD***********************************************************/
