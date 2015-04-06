@@ -20,13 +20,23 @@
     to {transform: translate(-50em, 0em);}
 }
 
+/**********************TEST******************/
+
+.TestingBox {
+    position: absolute;
+    top: 10em;
+    left: 10em;
+    height: 10em;
+    width: 10em;
+    background-color: yellow;
+}
 /*********************************************************OBSTACLE***********************************************************/
 
 .Obstacle {
     transform-origin: top left;
     animation: pipe-parallax 20s infinite;
 }
-.Obstacle-pipe1 {
+.Obstacle-pipe1Up {
     position: fixed;
     top: 0em;
     left: 0em;
@@ -37,7 +47,7 @@
     background-color: #3DD715;
 }
 
-.Obstacle-pipe2 {
+#Obstacle-pipe1Low {
     position: fixed;
     top: 30em;
     left: 0em;
@@ -46,7 +56,106 @@
 
     border-radius: 10em 10em 0em 0em;
     background-color: #3DD715;
+}
+/**
+.Obstacle-pipe2Up {
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    height: 30em;
+    width: 10em;
 
+    animation-delay: 2s;
+    border-radius: 0em 0em 10em 10em;
+    background-color: #3DD715;
+}
+
+.Obstacle-pipe2Low {
+    position: fixed;
+    top: 40em;
+    left: 0em;
+    height: 20em;
+    width: 10em;
+
+    animation-delay: 2s;
+    border-radius: 10em 10em 0em 0em;
+    background-color: #3DD715;
+
+}
+
+.Obstacle-pipe3Up {
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    height: 15em;
+    width: 10em;
+
+    animation-delay: 4s;
+    border-radius: 0em 0em 10em 10em;
+    background-color: #3DD715;
+}
+
+.Obstacle-pipe3Low {
+    position: fixed;
+    top: 25em;
+    left: 0em;
+    height: 35em;
+    width: 10em;
+
+    animation-delay: 4s;
+    border-radius: 10em 10em 0em 0em;
+    background-color: #3DD715;
+
+}
+**/
+/*********************************************************CLOUD***********************************************************/
+
+.Moving {
+    transform-origin: top left;
+    animation: cloud-parallax 14s infinite;
+}
+.Moving-cloud {
+    position: absolute;
+    top: 5em;
+    left: 50em;
+    width: 6em;
+    height: 4em;
+
+    border-radius: 2.5em;
+    background: white;
+}
+
+.Moving-cloud-circle1 {
+    position: absolute;
+    top: 0.7em;
+    left: 3em;
+    width: 4em;
+    height: 2.5em;
+
+    border-radius: 2em;
+    background: white;
+}
+
+.Moving-cloud-circle2 {
+    position: absolute;
+    top: -0.5em;
+    left: 0em;
+    width: 4em;
+    height: 2.5em;
+
+    border-radius: 30em 30em 30em 1em;
+    background: white;
+}
+
+.Moving-cloud-circle3 {
+    position: absolute;
+    top: 1.3em;
+    left: -2em;
+    width: 4em;
+    height: 3em;
+
+    border-radius: 40em;
+    background: white;
 }
 
 /*********************************************************PLAYER***********************************************************/
@@ -69,7 +178,7 @@
     left: 0.5em;
     width: 2.5em;
     height: 1.2em;
-    border-radius: 0.3em;
+    border-radius: 0.3em 0.3em 0.7em 0.7em;
     border-style: outset;
     border-width: 0.1em;
 
@@ -138,56 +247,6 @@
     border-width: 0.1em;
     border-color: yellow;
     background: Orange;
-}
-
-/*********************************************************CLOUD***********************************************************/
-
-.Cloud {
-    position: fixed;
-    top: 5em;
-    left: 50em;
-    width: 6em;
-    height: 4em;
-
-    border-radius: 2.5em;
-    background: white;
-
-    transform-origin: top left;
-    animation: cloud-parallax 10s infinite;
-    
-}
-
-.Cloud-circle1 {
-    position: fixed;
-    top: 0.7em;
-    left: 3em;
-    width: 4em;
-    height: 2.5em;
-
-    border-radius: 2em;
-    background: white;
-}
-
-.Cloud-circle2 {
-    position: fixed;
-    top: -0.5em;
-    left: 0em;
-    width: 4em;
-    height: 2.5em;
-
-    border-radius: 30em 30em 30em 1em;
-    background: white;
-}
-
-.Cloud-circle3 {
-    position: fixed;
-    top: 1.3em;
-    left: -2em;
-    width: 4em;
-    height: 3em;
-
-    border-radius: 40em;
-    background: white;
 }
 
 /*********************************************************BOTTOM***********************************************************/

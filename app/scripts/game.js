@@ -46,6 +46,24 @@ window.Game = (function() {
 
 		/*var cloud = this.el.find('.Cloud');
 		cloud.style.top = -(window.pageOffset / 4)+'px';*/
+
+
+
+		//Code that changes the height of the pipes with random numbers
+		//need to change the top and height(not finished) of the lower pipe
+		//Need to call this each time the pipes go through the canvas
+		
+		/*var pipe1Up = this.el.find('.Obstacle-pipe1Up');
+		var pipe1Low = this.el.find('.Obstacle-pipe1Low');
+
+		var newHeightUp =(Math.random()*100) + 20;
+		var num = 100-newHeightUp;
+		var newHeightLow  = num.toString();
+		
+		pipe1Up.height(newHeightUp);
+		document.getElementById('Obstacle-pipe1Low').style.top = (newHeightLow + 'em');
+		*/
+		
 	};
 
 	/**
