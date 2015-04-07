@@ -23,6 +23,10 @@ window.Game = (function() {
 		this.onFrame = this.onFrame.bind(this);
 	};
 
+	Game.prototype.preload = function(){
+		Game.load.audio('jump', 'assets/Flappy.mp3');
+
+	};
 	/**
 	 * Runs every frame. Calculates a delta and allows each game
 	 * entity to update itself.

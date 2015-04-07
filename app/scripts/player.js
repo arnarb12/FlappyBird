@@ -15,6 +15,7 @@ window.Player = (function() {
 		this.el = el;
 		this.game = game;
 		this.pos = { x: 0, y: 0 };
+		this.Flappy = this.game.add.audio('Flappy');
 	};
 
 	/**
@@ -41,8 +42,11 @@ window.Player = (function() {
 
 		this.checkCollisionWithBounds();
 
+
 		// Update UI
 		this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
+		//this.load.audio(Controls.keys.right, 'Flappy.mp3');
+
 	};
 
 	Player.prototype.checkCollisionWithBounds = function() {

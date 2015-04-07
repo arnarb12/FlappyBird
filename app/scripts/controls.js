@@ -27,6 +27,7 @@ window.Controls = (function() {
             .on('keyup', this._onKeyUp.bind(this));
     };
 
+
     Controls.prototype._onKeyDown = function(e) {
         // Only jump if space wasn't pressed.
         if (e.keyCode === 32 && !this.keys.space) {
@@ -47,7 +48,11 @@ window.Controls = (function() {
             this.keys[keyName] = false;
             return false;
         }
+
     };
+    
+
+
 
     /**
      * Only answers true once until a key is pressed again.
