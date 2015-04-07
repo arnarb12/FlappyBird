@@ -10,6 +10,9 @@ window.Game = (function() {
 	var Game = function(el) {
 		this.el = el;
 		this.player = new window.Player(this.el.find('.Player'), this);
+		this.pipe1 = new window.Pipes(this.el.find('.Obstacle1'), this);
+		this.pipe2 = new window.Pipes(this.el.find('.Obstacle2'), this);
+		this.pipe3 = new window.Pipes(this.el.find('.Obstacle3'), this);
 		this.isPlaying = false;
 
 		//scale
@@ -48,6 +51,9 @@ window.Game = (function() {
 
 		// Update game entities.
 		this.player.onFrame(delta);
+		this.pipe1.onFrame();
+		this.pipe2.onFrame();
+		this.pipe3.onFrame();
 
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
@@ -55,20 +61,18 @@ window.Game = (function() {
 		/*var cloud = this.el.find('.Cloud');
 		cloud.style.top = -(window.pageOffset / 4)+'px';*/
 
-
-
 		//Code that changes the height of the pipes with random numbers
 		//need to change the top and height(not finished) of the lower pipe
 		//Need to call this each time the pipes go through the canvas
-		
-		/*var pipe1Up = this.el.find('.Obstacle-pipe1Up');
+
+		/*var pipes1 = this.el.find('.Obstacle-pipes1');
 		var pipe1Low = this.el.find('.Obstacle-pipe1Low');
 
 		var newHeightUp =(Math.random()*100) + 20;
 		var num = 100-newHeightUp;
 		var newHeightLow  = num.toString();
 		
-		pipe1Up.height(newHeightUp);
+		pipes1.height(newHeightUp);
 		document.getElementById('Obstacle-pipe1Low').style.top = (newHeightLow + 'em');
 		*/
 		
@@ -91,6 +95,9 @@ window.Game = (function() {
 	 */
 	Game.prototype.reset = function() {
 		this.player.reset();
+		this.pipe1.reset();
+		this.pipe2.reset();
+		this.pipe3.reset();
 	};
 
 	/**
