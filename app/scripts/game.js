@@ -24,7 +24,15 @@ window.Game = (function() {
 
 		// Cache a bound onFrame since we need it each frame.
 		this.onFrame = this.onFrame.bind(this);
+	
+
+		Game.prototype.preload = function(){
+		Game.load.audio('jump', 'assets/Flappy.mp3');
+
 	};
+
+	};
+
 
 	/**
 	 * Runs every frame. Calculates a delta and allows each game
