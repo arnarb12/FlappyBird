@@ -18,7 +18,7 @@ window.Player = (function() {
 	};
 
 	/**
-	 * Resets the state of the player for a new game.
+	 * Resets the state of the Player for a new game.
 	 */
 	Player.prototype.reset = function() {
 		this.pos.x = INITIAL_POSITION_X;

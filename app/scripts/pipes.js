@@ -1,9 +1,8 @@
 window.Pipes = (function() {
 	'use strict';
 
-	var SPEED = 20;
-	var INITIAL_POSITION_X = 30;
-	var INITIAL_POSITION_Y = 25;
+	var INITIAL_POSITION_X = 100;
+	var INITIAL_POSITION_Y = 0;
 
 	var Pipes = function(el, game) {
 		this.el = el;
@@ -19,9 +18,21 @@ window.Pipes = (function() {
 		this.pos.y = INITIAL_POSITION_Y;
 	};
 
-	Pipes.prototype.onFrame = function(delta) {
-		this.pos.x += delta * SPEED;
+	Pipes.prototype.onFrame = function() {
+		if(this.pos.x < 0) {
+			this.reset();
+			this.el.css('height(5em)');
+		}
+		else {
+			this.pos.x -=  0.3;
+		}
 
+		//this.checkCollisionWithBounds();
+
+		// Update UI
+		this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
+
+				
 		//37.6 is max height for a pipe
 		/*var pipe1 = this.el.find('.Obstacle-pipe1');
 		var pipe2 = this.el.find('.Obstacle-pipe2');
@@ -31,11 +42,6 @@ window.Pipes = (function() {
 		console.log(newHeightUp);
 		pipe1.height(newHeightUp);
 		pipe2.top(newHeightLow);*/
-
-		this.checkCollisionWithBounds();
-
-		// Update UI
-		this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
 	};
 
 	/*Pipes.prototype.checkCollisionWithBounds = function() {

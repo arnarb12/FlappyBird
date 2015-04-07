@@ -10,10 +10,10 @@
     to {transform: translate(-60em, 3em);}
 }
 
-@keyframes pipe-parallax {
+/*@keyframes pipe-parallax {
     from {transform: translate3d(120em ,0em , 0em);}
     to {transform: translate3d(-10em ,0em , 0em);}
-}
+}*/
 
 @keyframes bottom-parallax {
     from {transform: translate(-20em, 0em);}
@@ -29,7 +29,7 @@
     to {transform: translate(-20em, 0em);}*/
 /**********************TEST******************/
 
-.TestingBox {
+/*.TestingBox {
     position: absolute;
     top: 10em;
     left: 10em;
@@ -40,15 +40,15 @@
     transform-origin: top left;
     animation: test-parallax 3s infinite;
 
-}
+}*/
 /*********************************************************OBSTACLE***********************************************************/
 
-.Obstacle {
+/*.Obstacle {
     transform-origin: top left;
     animation: pipe-parallax 8s infinite;
     animation-timing-function: linear;
-}
-.Obstacle-pipe1Up {
+}*/
+.Obstacle1-pipe1Up {
     position: fixed;
     top: 0em;
     left: 0em;
@@ -59,7 +59,7 @@
     background-color: #3DD715;
 }
 
-#Obstacle-pipe1Low {
+.Obstacle1-pipe1Low {
     position: fixed;
     top: 30em;
     left: 0em;
@@ -69,36 +69,34 @@
     border-radius: 10em 10em 0em 0em;
     background-color: #3DD715;
 }
-/**
-.Obstacle-pipe2Up {
+
+.Obstacle2-pipe2Up {
     position: fixed;
     top: 0em;
-    left: 0em;
+    left: 40em;
     height: 30em;
     width: 10em;
 
-    animation-delay: 2s;
     border-radius: 0em 0em 10em 10em;
     background-color: #3DD715;
 }
 
-.Obstacle-pipe2Low {
+.Obstacle2-pipe2Low {
     position: fixed;
     top: 40em;
-    left: 0em;
+    left: 40em;
     height: 20em;
     width: 10em;
 
-    animation-delay: 2s;
     border-radius: 10em 10em 0em 0em;
     background-color: #3DD715;
 
 }
 
-.Obstacle-pipe3Up {
+.Obstacle3-pipe3Up {
     position: fixed;
     top: 0em;
-    left: 0em;
+    left: 90em;
     height: 15em;
     width: 10em;
 
@@ -107,10 +105,10 @@
     background-color: #3DD715;
 }
 
-.Obstacle-pipe3Low {
+.Obstacle3-pipe3Low {
     position: fixed;
     top: 25em;
-    left: 0em;
+    left: 90em;
     height: 35em;
     width: 10em;
 
@@ -119,7 +117,7 @@
     background-color: #3DD715;
 
 }
-**/
+
 /*********************************************************CLOUD***********************************************************/
 
 .Moving {
@@ -267,16 +265,16 @@
 .Bottom {
     position: absolute;
 
-    top: 95%;
+    top: 90%;
     bottom: 0%;
-    width: 150%;
-    height: 10em;
+    width: 170em;
+    height:6em;
 
     background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Color_icon_green.svg/1024px-Color_icon_green.svg.png");
-    background-size: 25%;
+    background-size: 3.8%;
 
     transform-origin: top left;
-    animation: bottom-parallax 5s infinite;
+    animation: bottom-parallax 2s infinite;
     animation-timing-function: linear;
 }
 
