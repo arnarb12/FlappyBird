@@ -1,36 +1,47 @@
 window.Pipes = (function() {
 	'use strict';
 
-	var INITIAL_POSITION_X = 100;
+	var FORSCORE = true;
 	var INITIAL_POSITION_Y = 0;
+	var INITIAL_POSITION_Z = 0;
 
-	var Pipes = function(el, game) {
+	var Pipes = function(el, game, thisX) {
 		this.el = el;
 		this.game = game;
-		this.pos = { x: 0, y: 0 };
+		this.pos = { x: thisX, y: 0, z:0 };
+		//this.inX = thisX;
 	};
 
 	/**
 	 * Resets the state of the player for a new game.
 	 */
 	Pipes.prototype.reset = function() {
-		this.pos.x = INITIAL_POSITION_X;
+		//this.pos.x = this.inX;
 		this.pos.y = INITIAL_POSITION_Y;
+		this.pos.z = INITIAL_POSITION_Z;
 	};
 
 	Pipes.prototype.onFrame = function() {
-		if(this.pos.x < 0) {
-			this.reset();
-			this.el.css('height(5em)');
+		if(this.pos.x < (-5)) {
+			this.pos.x = 100;
+			FORSCORE = true;
 		}
 		else {
 			this.pos.x -=  0.3;
 		}
 
+		if(this.pos.x < 30 && FORSCORE) {
+			this.game.score += 1;
+			FORSCORE = false;
+		}
+		console.log(this.game.score);
+
+		
+
 		//this.checkCollisionWithBounds();
 
 		// Update UI
-		this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
+		this.el.css('transform', 'translateZ(0) translate3d(' + this.pos.x + 'em, ' + this.pos.y + 'em, ' + this.pos.z + 'em)');
 
 				
 		//37.6 is max height for a pipe

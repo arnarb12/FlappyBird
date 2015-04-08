@@ -22,26 +22,24 @@
 
 @keyframes test-parallax {
     from {transform: translate3d(120em ,0em , 0em);}
-    to {transform: translate3d(-40em ,0em , 0em);}
+    to {transform: translate3d(-40em ,60em , 0em);}
 }
 
 /*from {transform: translate(120em, 0em);}
     to {transform: translate(-20em, 0em);}*/
 /**********************TEST******************/
 
-/*.TestingBox {
+.TestingBox {
     position: absolute;
-    top: 10em;
-    left: 10em;
     height: 10em;
     width: 10em;
     background-color: yellow;
 
-    transform-origin: top left;
-    animation: test-parallax 3s infinite;
+    /**transform-origin: top left;
+    animation: test-parallax 10s infinite;**/
 
-}*/
-/*********************************************************OBSTACLE***********************************************************/
+}
+/***************************0-40-90******************************OBSTACLE***********************************************************/
 
 /*.Obstacle {
     transform-origin: top left;
@@ -51,8 +49,7 @@
 .Obstacle1-pipe1Up {
     position: fixed;
     top: 0em;
-    left: 0em;
-    height: 20em;
+    height: 16em;
     width: 10em;
 
     border-radius: 0em 0em 10em 10em;
@@ -61,8 +58,7 @@
 
 .Obstacle1-pipe1Low {
     position: fixed;
-    top: 30em;
-    left: 0em;
+    top: 34em;
     height: 30em;
     width: 10em;
 
@@ -73,8 +69,7 @@
 .Obstacle2-pipe2Up {
     position: fixed;
     top: 0em;
-    left: 40em;
-    height: 30em;
+    height: 26em;
     width: 10em;
 
     border-radius: 0em 0em 10em 10em;
@@ -83,8 +78,7 @@
 
 .Obstacle2-pipe2Low {
     position: fixed;
-    top: 40em;
-    left: 40em;
+    top: 44em;
     height: 20em;
     width: 10em;
 
@@ -96,23 +90,19 @@
 .Obstacle3-pipe3Up {
     position: fixed;
     top: 0em;
-    left: 90em;
-    height: 15em;
+    height: 11em;
     width: 10em;
 
-    animation-delay: 4s;
     border-radius: 0em 0em 10em 10em;
     background-color: #3DD715;
 }
 
 .Obstacle3-pipe3Low {
     position: fixed;
-    top: 25em;
-    left: 90em;
+    top: 29em;
     height: 35em;
     width: 10em;
 
-    animation-delay: 4s;
     border-radius: 10em 10em 0em 0em;
     background-color: #3DD715;
 
@@ -285,11 +275,12 @@
 	left: 50%;
 	top: 10em;
 	height: 30em;
-	width: 40em;
+	width: 30em;
 	margin-left: -20em;
 	box-sizing: border-box;
 	background: purple;
 	text-align: center;
+    border-radius: 0.5em;
 	-webkit-transform: translate(0, -40em);
 	-webkit-transition: -webkit-transform 0.5s;
 }
@@ -302,7 +293,7 @@
 }
 
 .Scoreboard-restart {
-	margin-top: 20em;
+	margin-top: 2em;
 	font-size: inherit;
 	padding: 0.4em 1.5em;
 	border: 0.2em solid white;
@@ -310,9 +301,22 @@
 	cursor: pointer;
 }
 .Scoreboard-restartText {
-font-family: 'Comic Sans MS', serif;
-font-size: 2.4em;
-color: white;
+    font-family: 'Comic Sans MS', serif;
+    font-size: 2.4em;
+    color: white;
+}
+
+.Scoreboard-score {
+    font-family: 'Comic Sans MS', serif;
+    font-size: 12em;
+    color: white;
+}
+
+.Scoreboard-text {
+    font-family: 'Comic Sans MS', serif;
+    font-size: 2.4em;
+    padding: 0.4em;
+    color: white;
 }
 body {
 background: black;

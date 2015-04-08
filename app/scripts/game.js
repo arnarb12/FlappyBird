@@ -9,10 +9,12 @@ window.Game = (function() {
 	 */
 	var Game = function(el) {
 		this.el = el;
+		var xpipe = 100;
 		this.player = new window.Player(this.el.find('.Player'), this);
-		this.pipe1 = new window.Pipes(this.el.find('.Obstacle1'), this);
-		this.pipe2 = new window.Pipes(this.el.find('.Obstacle2'), this);
-		this.pipe3 = new window.Pipes(this.el.find('.Obstacle3'), this);
+		this.pipe1 = new window.Pipes(this.el.find('.Obstacle1'), this, xpipe, 0);
+		this.pipe2 = new window.Pipes(this.el.find('.Obstacle2'), this, xpipe+35, 0);
+		this.pipe3 = new window.Pipes(this.el.find('.Obstacle3'), this, xpipe+70, 0);
+		this.score = 0;
 		this.isPlaying = false;
 
 		//scale
@@ -25,12 +27,9 @@ window.Game = (function() {
 		// Cache a bound onFrame since we need it each frame.
 		this.onFrame = this.onFrame.bind(this);
 	
-
-		Game.prototype.preload = function(){
-		Game.load.audio('jump', 'assets/Flappy.mp3');
-
-	};
-
+		/*Game.prototype.preload = function(){
+			Game.load.audio('jump', 'assets/Flappy.mp3');
+		};*/
 	};
 
 
@@ -57,9 +56,6 @@ window.Game = (function() {
 
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
-
-		/*var cloud = this.el.find('.Cloud');
-		cloud.style.top = -(window.pageOffset / 4)+'px';*/
 
 		//Code that changes the height of the pipes with random numbers
 		//need to change the top and height(not finished) of the lower pipe
@@ -98,6 +94,7 @@ window.Game = (function() {
 		this.pipe1.reset();
 		this.pipe2.reset();
 		this.pipe3.reset();
+		this.score = 0;
 	};
 
 	/**
@@ -105,7 +102,7 @@ window.Game = (function() {
 	 */
 	Game.prototype.gameover = function() {
 		this.isPlaying = false;
-
+		$('.Scoreboard-score').html(this.score);
 		// Should be refactored into a Scoreboard class.
 		var that = this;
 		var scoreboardEl = this.el.find('.Scoreboard');
