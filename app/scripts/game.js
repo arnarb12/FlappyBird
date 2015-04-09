@@ -56,22 +56,6 @@ window.Game = (function() {
 
 		// Request next frame.
 		window.requestAnimationFrame(this.onFrame);
-
-		//Code that changes the height of the pipes with random numbers
-		//need to change the top and height(not finished) of the lower pipe
-		//Need to call this each time the pipes go through the canvas
-
-		/*var pipes1 = this.el.find('.Obstacle-pipes1');
-		var pipe1Low = this.el.find('.Obstacle-pipe1Low');
-
-		var newHeightUp =(Math.random()*100) + 20;
-		var num = 100-newHeightUp;
-		var newHeightLow  = num.toString();
-		
-		pipes1.height(newHeightUp);
-		document.getElementById('Obstacle-pipe1Low').style.top = (newHeightLow + 'em');
-		*/
-		
 	};
 
 	/**

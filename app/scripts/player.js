@@ -28,18 +28,6 @@ window.Player = (function() {
 	};
 
 	Player.prototype.onFrame = function() {
-		/**if (Controls.keys.right) {
-			this.pos.x += delta * SPEED;
-		}
-		if (Controls.keys.left) {
-			this.pos.x -= delta * SPEED;
-		}
-		if (Controls.keys.down) {
-			this.pos.y += delta * SPEED;
-		}
-		if (Controls.keys.up) {
-			this.pos.y -= delta * SPEED;
-		}**/
 		$('.GameCanvas').click(function() {
 			ISCLICKED = true;
 		});
@@ -47,7 +35,6 @@ window.Player = (function() {
 		if(Controls.keys.space) {
 			this.pos.y -= 0.1*SPEED;
 			ISCLICKED = false;
-			//this.el.css('transform', 'rotate(90deg)'); 
 		}
 		else if(ISCLICKED) {
 			this.pos.y -= 1*SPEED;
@@ -57,10 +44,8 @@ window.Player = (function() {
 			this.pos.y += 0.06*SPEED;
 		}
 		
-
 		this.checkCollisionWithBounds();
 
-		//this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, 0em)');
 		// Update UI
 		this.el.css('transform', 'translateZ(0) translate(' + this.pos.x + 'em, ' + this.pos.y + 'em)');
 		//this.load.audio(Controls.keys.right, 'Flappy.mp3');

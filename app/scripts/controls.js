@@ -52,8 +52,6 @@ window.Controls = (function() {
     };
     
 
-
-
     /**
      * Only answers true once until a key is pressed again.
      */

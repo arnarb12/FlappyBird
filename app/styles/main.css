@@ -10,42 +10,13 @@
     to {transform: translate(-60em, 3em);}
 }
 
-/*@keyframes pipe-parallax {
-    from {transform: translate3d(120em ,0em , 0em);}
-    to {transform: translate3d(-10em ,0em , 0em);}
-}*/
-
 @keyframes bottom-parallax {
     from {transform: translate(-20em, 0em);}
     to {transform: translate(-50em, 0em);}
 }
 
-@keyframes test-parallax {
-    from {transform: translate3d(120em ,0em , 0em);}
-    to {transform: translate3d(-40em ,60em , 0em);}
-}
+/*********************************************************OBSTACLE***********************************************************/
 
-/*from {transform: translate(120em, 0em);}
-    to {transform: translate(-20em, 0em);}*/
-/**********************TEST******************/
-
-.TestingBox {
-    position: absolute;
-    height: 10em;
-    width: 10em;
-    background-color: yellow;
-
-    /**transform-origin: top left;
-    animation: test-parallax 10s infinite;**/
-
-}
-/***************************0-40-90******************************OBSTACLE***********************************************************/
-
-/*.Obstacle {
-    transform-origin: top left;
-    animation: pipe-parallax 8s infinite;
-    animation-timing-function: linear;
-}*/
 .Obstacle1-pipe1Up {
     position: fixed;
     top: 0em;
@@ -53,7 +24,9 @@
     width: 10em;
 
     border-radius: 0em 0em 10em 10em;
-    background-color: #3DD715;
+    border: solid white;
+    /*background-image: url("http://scrapbookingcafeonline.ca/zenimages/color%20pop%20turquoise.jpg");*/
+    background-image: url("http://www.zingerbug.com/Backgrounds/background_images/small_turquoise_bricks_seamless_pattern.gif");
 }
 
 .Obstacle1-pipe1Low {
@@ -63,7 +36,8 @@
     width: 10em;
 
     border-radius: 10em 10em 0em 0em;
-    background-color: #3DD715;
+    border: solid white;
+    background-image: url("http://www.zingerbug.com/Backgrounds/background_images/small_turquoise_bricks_seamless_pattern.gif");
 }
 
 .Obstacle2-pipe2Up {
@@ -73,7 +47,8 @@
     width: 10em;
 
     border-radius: 0em 0em 10em 10em;
-    background-color: #3DD715;
+    border: solid white;
+    background-image: url("http://www.zingerbug.com/Backgrounds/background_images/small_turquoise_bricks_seamless_pattern.gif");
 }
 
 .Obstacle2-pipe2Low {
@@ -83,7 +58,8 @@
     width: 10em;
 
     border-radius: 10em 10em 0em 0em;
-    background-color: #3DD715;
+    border: solid white;
+    background-image: url("http://www.zingerbug.com/Backgrounds/background_images/small_turquoise_bricks_seamless_pattern.gif");
 
 }
 
@@ -94,7 +70,8 @@
     width: 10em;
 
     border-radius: 0em 0em 10em 10em;
-    background-color: #3DD715;
+    border: solid white;
+    background-image: url("http://www.zingerbug.com/Backgrounds/background_images/small_turquoise_bricks_seamless_pattern.gif");
 }
 
 .Obstacle3-pipe3Low {
@@ -104,7 +81,8 @@
     width: 10em;
 
     border-radius: 10em 10em 0em 0em;
-    background-color: #3DD715;
+    border: solid white;
+    background-image: url("http://www.zingerbug.com/Backgrounds/background_images/small_turquoise_bricks_seamless_pattern.gif");
 
 }
 
@@ -255,12 +233,15 @@
 .Bottom {
     position: absolute;
 
-    top: 90%;
+    top: 95%;
     bottom: 0%;
     width: 170em;
     height:6em;
+    border: solid white;
 
-    background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Color_icon_green.svg/1024px-Color_icon_green.svg.png");
+    /*background-image: url("http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Color_icon_green.svg/1024px-Color_icon_green.svg.png");*/
+    /*background-image: url("http://www.lughertexture.com/images/textures/details/floor_8/modern_pavement_9/stone_floor_tile_gray_20131009_1835044869.jpg");*/
+    background-image: url("http://thumbs.dreamstime.com/x/purple-tiles-1602712.jpg");
     background-size: 3.8%;
 
     transform-origin: top left;
@@ -281,6 +262,7 @@
 	background: purple;
 	text-align: center;
     border-radius: 0.5em;
+    border: solid white;
 	-webkit-transform: translate(0, -40em);
 	-webkit-transition: -webkit-transform 0.5s;
 }
